@@ -8,13 +8,13 @@ class Emmettblocks {
             "name": "Emmettblocks",
                         "blocks": [
                         {
-                            "opcode": "fetchURL",
+                            "opcode": "fetchpoo",
                             "blockType": "hat",
-                            "text": "fetch data from [url]",
+                            "text": "when i go do a [thing]",
                             "arguments": {
-                                "url": {
+                                "thing": {
                                     "type": "string",
-                                    "defaultValue": "https://api.weather.gov/stations/KNYC/observations"
+                                    "defaultValue": "poopoo"
                                 },
                             }
                         },
@@ -37,7 +37,7 @@ class Emmettblocks {
         }
     }
     
-        fetchURL({url}) {
+        fetchpoo({url}) {
         return fetch(url).then(response => response.text())
     }
     
