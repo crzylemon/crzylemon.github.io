@@ -10,7 +10,7 @@ class Emmettblocks {
                         {
                             "opcode": "whenido",
                             "blockType": "hat",
-                            "text": "when i go do a [thing]",
+                            "text": "when i go do a [thing1]",
                             "arguments": {
                                 "thing": {
                                     "type": "string",
@@ -21,7 +21,7 @@ class Emmettblocks {
                         {
                             "opcode": "doa",
                             "blockType": "stack",
-                            "text": "do a [thing]",
+                            "text": "do a [thing2]",
                             "arguments": {
                                 "thing": {
                                     "type": "string",
@@ -33,11 +33,11 @@ class Emmettblocks {
         }
     }
     
-        whenido({thing}) {
+        whenido({thing1}) {
         return "did a" + " " + (thing)
     }
     
-    doa({thing}) {
+    doa({thing2}) {
         return "hello"
         }
     }
