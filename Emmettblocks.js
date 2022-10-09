@@ -8,7 +8,7 @@ class Emmettblocks {
             "name": "Emmettblocks",
                         "blocks": [
                         {
-                            "opcode": "fetchpoo",
+                            "opcode": "whenido",
                             "blockType": "hat",
                             "text": "when i go do a [thing]",
                             "arguments": {
@@ -19,41 +19,26 @@ class Emmettblocks {
                             }
                         },
                         {
-                            "opcode": "jsonExtract",
-                            "blockType": "reporter",
-                            "text": "extract [name] from [data]",
+                            "opcode": "doa",
+                            "blockType": "stack",
+                            "text": "do a [thing]",
                             "arguments": {
-                                "name": {
+                                "thing": {
                                     "type": "string",
-                                    "defaultValue": "temperature"
-                                },
-                                "data": {
-                                    "type": "string",
-                                    "defaultValue": '{"temperature": 12.3}'
-                                },
+                                    "defaultValue": "poopoo"
+                                }
                             }
                         },
                 ]
         }
     }
     
-        fetchpoo({url}) {
-        return fetch(url).then(response => response.text())
+        whenido({thing}) {
+        return "did a" + " " + (thing)
     }
     
-    jsonExtract({name,data}) {
-        var parsed = JSON.parse(data)
-        if (name in parsed) {
-            var out = parsed[name]
-            var t = typeof(out)
-            if (t == "string" || t == "number")
-                return out
-            if (t == "boolean")
-                return t ? 1 : 0
-            return JSON.stringify(out)
-        }
-        else {
-            return ""
+    doa({thing}) {
+        return "hello"
         }
     }
 }
