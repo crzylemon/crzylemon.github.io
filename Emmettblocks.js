@@ -23,7 +23,7 @@ class Emmettblocks {
                             "blockType": "command",
                             "text": "Give string to Bluetooth [brod]",
                             "arguments": {
-                                "name": {
+                                "brod": {
                                     "type": "string",
                                     "defaultValue": "message1"
                                 },
@@ -37,7 +37,7 @@ class Emmettblocks {
         
     }
     
-    give({name}) {
+    give({brod}) {
         return "Gave " + name + " To Bluetooth!"
     }
 }
