@@ -45,7 +45,7 @@ class Emmettblocks {
     }
     
     give({brod}) {
-        return "Gave " + name + " to cloud!"
+        return "Gave " + brod + " to cloud!"
     }
     resetall({}) {
         return "Reset cloud data!"
