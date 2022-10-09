@@ -34,11 +34,11 @@ class Emmettblocks {
     }
     
         fetchpoo({thing}) {
-        return "idk"
+        
     }
     
     doa({name}) {
-        return "did a" + name
+        return "did a" + " " + name
     }
 }
 
