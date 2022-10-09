@@ -10,7 +10,7 @@ class Emmettblocks {
                         {
                             "opcode": "whengiven",
                             "blockType": "hat",
-                            "text": "When [thing] given from Bluetooth",
+                            "text": "When [thing] recived from cloud",
                             "arguments": {
                                 "thing": {
                                     "type": "string",
@@ -21,12 +21,19 @@ class Emmettblocks {
                         {
                             "opcode": "give",
                             "blockType": "command",
-                            "text": "Give string to Bluetooth [brod]",
+                            "text": "Give string [brod]",
                             "arguments": {
                                 "brod": {
                                     "type": "string",
                                     "defaultValue": "message1"
                                 },
+                            }
+                        },
+                          {
+                            "opcode": "resetall",
+                            "blockType": "command",
+                            "text": "Reset all",
+                            "arguments": {},
                             }
                         },
                 ]
@@ -38,7 +45,10 @@ class Emmettblocks {
     }
     
     give({brod}) {
-        return "Gave " + name + " To Bluetooth!"
+        return "Gave " + name + " to cloud!"
+    }
+    resetall() {
+        return "Reset cloud data!"
     }
 }
 
