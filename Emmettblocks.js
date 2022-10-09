@@ -19,7 +19,7 @@ class Emmettblocks {
                             }
                         },
                         {
-                            "opcode": "jsonExtract",
+                            "opcode": "doa",
                             "blockType": "stack",
                             "text": "do a [name]",
                             "arguments": {
@@ -34,11 +34,11 @@ class Emmettblocks {
     }
     
         fetchpoo({thing}) {
-        return "did a" + thing
+        return "idk"
     }
     
-    jsonExtract({name,data}) {
-        return "did a" + thing
+    doa({name}) {
+        return "did a" + name
     }
 }
 
