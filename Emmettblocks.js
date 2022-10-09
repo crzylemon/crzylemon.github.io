@@ -1,83 +1,61 @@
 class Emmettblocks {
-    constructor(runtime) {
-        this.runtime = runtime
-        this.currentMSecs = -1
-        this.previousButtons = []
-        this.currentButtons = []
+    constructor() {
     }
     
     getInfo() {
         return {
-            "id": "Emmettblocks",
+            "id": "emmettblocks",
             "name": "Emmettblocks",
-            "blocks": [{
-                        "opcode": "New_block",
-                        "blockType": "hat",
-                        "text": "button [b] [eventType]",
-                        "arguments": {
-                            "b": {
-                                "type": "number",
-                                "defaultValue": "0"
-                            },
-                            "eventType": {
-                                "type": "number",
-                                "defaultValue": "1",
-                                "menu": "menu"
-                            },
+                        "blocks": [
+                        {
+                            "opcode": "fetchURL",
+                            "blockType": "reporter",
+                            "text": "fetch data from [url]",
+                            "arguments": {
+                                "url": {
+                                    "type": "string",
+                                    "defaultValue": "https://api.weather.gov/stations/KNYC/observations"
+                                },
+                            }
                         },
-                    },
-            ],
-            "menus": {
-                "menu": [{text:"Dropdown1",value:1}, {text:"Dropdown2",value:0}],
-            }            
-        };
+                        {
+                            "opcode": "jsonExtract",
+                            "blockType": "reporter",
+                            "text": "extract [name] from [data]",
+                            "arguments": {
+                                "name": {
+                                    "type": "string",
+                                    "defaultValue": "temperature"
+                                },
+                                "data": {
+                                    "type": "string",
+                                    "defaultValue": '{"temperature": 12.3}'
+                                },
+                            }
+                        },
+                ]
+        }
     }
     
-    update() {
-        if (this.runtime.currentMSecs == this.currentMSecs) 
-            return // not a new polling cycle
-        this.currentMSecs = this.runtime.currentMSecs
-        var gamepads = navigator.getGamepads()
-        if (gamepads == null || gamepads.length == 0 || gamepads[0] == null) {
-            // different number of buttons, so new gamepad
-            this.previousButtons = []
-            this.currentButtons = []
-            return
-        }
-        var gamepad = gamepads[0]
-        if (gamepad.buttons.length != this.previousButtons.length) {
-            this.previousButtons = []
-            for (var i = 0; i < gamepad.buttons.length; i++) 
-                this.previousButtons.push(false)
+        fetchURL({url}) {
+        return fetch(url).then(response => response.text())
+    }
+    
+    jsonExtract({name,data}) {
+        var parsed = JSON.parse(data)
+        if (name in parsed) {
+            var out = parsed[name]
+            var t = typeof(out)
+            if (t == "string" || t == "number")
+                return out
+            if (t == "boolean")
+                return t ? 1 : 0
+            return JSON.stringify(out)
         }
         else {
-            this.previousButtons = this.currentButtons
+            return ""
         }
-        this.currentButtons = []
-        for (var i = 0; i < gamepad.buttons.length; i++) 
-            this.currentButtons.push(gamepad.buttons[i].pressed)
-    }
-    
-    New_block({b,eventType}) {
-        this.update()
-        if (b < this.currentButtons.length) {
-            if (eventType == 1) { // note: this will be a string, so better to compare it to 1 than to treat it as a Boolean
-                if (this.currentButtons[b] && ! this.previousButtons[b]) {
-                    return true
-                }
-            }
-            else {
-                if (!this.currentButtons[b] && this.previousButtons[b]) {
-                    return true
-                }
-             }
-        }
-        return false
     }
 }
 
-(function() {
-    var extensionInstance = new ScratchSimpleGamepad(window.vm.extensionManager.runtime)
-    var serviceName = window.vm.extensionManager._registerInternalExtension(extensionInstance)
-    window.vm.extensionManager._loadedExtensions.set(extensionInstance.getInfo().id, serviceName)
-})()
+Scratch.extensions.register(new Emmettblocks())
