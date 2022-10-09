@@ -16,24 +16,24 @@ class Emmettblocks {
             "name": "Emmettblocks",
                         "blocks": [
                         {
-                            "opcode": "fetchpoo",
+                            "opcode": "whengiven",
                             "blockType": "hat",
-                            "text": "when i go do a [thing]",
+                            "text": "When [thing] given from Bluetooth",
                             "arguments": {
                                 "thing": {
                                     "type": "string",
-                                    "defaultValue": "poopoo"
+                                    "defaultValue": "message1"
                                 },
                             }
                         },
                         {
-                            "opcode": "doa",
+                            "opcode": "give",
                             "blockType": "command",
-                            "text": "do a [name]",
+                            "text": "Give string to Bluetooth [brod]",
                             "arguments": {
                                 "name": {
                                     "type": "string",
-                                    "defaultValue": "poopoo"
+                                    "defaultValue": "message1"
                                 },
                             }
                         },
@@ -41,12 +41,12 @@ class Emmettblocks {
         }
     }
     
-        fetchpoo({thing}) {
+        whengiven({thing}) {
         
     }
     
-    doa({name}) {
-        return "did a" + " " + name
+    give({name}) {
+        return "Gave " + name + " To Bluetooth!"
     }
 }
 
