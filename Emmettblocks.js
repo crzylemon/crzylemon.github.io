@@ -8,9 +8,9 @@ class Emmettblocks {
             "name": "Emmettblocks",
                         "blocks": [
                         {
-                            "opcode": "whenido",
+                            "opcode": "fetchpoo",
                             "blockType": "hat",
-                            "text": "when i go do a [thing1]",
+                            "text": "when i go do a [thing]",
                             "arguments": {
                                 "thing": {
                                     "type": "string",
@@ -19,27 +19,26 @@ class Emmettblocks {
                             }
                         },
                         {
-                            "opcode": "doa",
+                            "opcode": "jsonExtract",
                             "blockType": "stack",
-                            "text": "do a [thing2]",
+                            "text": "do a [name]",
                             "arguments": {
-                                "thing": {
+                                "name": {
                                     "type": "string",
                                     "defaultValue": "poopoo"
-                                }
+                                },
                             }
                         },
                 ]
         }
     }
     
-        whenido({thing1}) {
-        return "did a" + " " + (thing)
+        fetchpoo({thing}) {
+        return "did a" + thing
     }
     
-    doa({thing2}) {
-        return "hello"
-        }
+    jsonExtract({name,data}) {
+        return "did a" + thing
     }
 }
 
