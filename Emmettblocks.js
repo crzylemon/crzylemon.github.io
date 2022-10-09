@@ -20,7 +20,7 @@ class Emmettblocks {
                         },
                         {
                             "opcode": "doa",
-                            "blockType": "stack",
+                            "blockType": "command",
                             "text": "do a [name]",
                             "arguments": {
                                 "name": {
