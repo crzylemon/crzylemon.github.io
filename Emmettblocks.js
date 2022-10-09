@@ -9,7 +9,7 @@ class Emmettblocks {
                         "blocks": [
                         {
                             "opcode": "fetchURL",
-                            "blockType": "reporter",
+                            "blockType": "hat",
                             "text": "fetch data from [url]",
                             "arguments": {
                                 "url": {
