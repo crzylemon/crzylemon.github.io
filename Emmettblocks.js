@@ -30,7 +30,7 @@ class CloudMultiplayer {
 			}, {
 				"opcode": "connect",
 				"blockType": "command",
-				"text": "Connect to cloud)",
+				"text": "Connect to cloud",
 				"arguments": {},
 			}, {
 				"opcode": "whenanyrecivedwith",
@@ -42,7 +42,12 @@ class CloudMultiplayer {
 						"defaultValue": ""
 					},
 				},
-			}   
+			}, {
+				"opcode": "recived",
+				"blockType": "reporter",
+				"text": "Last recived from cloud",
+				"arguments": {},
+			} 
 				  ]
 		};
 	}
@@ -78,6 +83,10 @@ const session = new Session(process.env.USERNAME, process.env.PASSWORD, function
 		else {
 			return "False.";
 		}
+	}
+	
+	recived({}) {
+		return "Placeholder.";
 	}
 	
 }
