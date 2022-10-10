@@ -38,7 +38,13 @@ class Emmettblocks {
 				"blockType": "command",
 				"text": "Reset all",
 				"arguments": {},
-			}]
+			}, {
+				"opcode": "linebreak",
+				"blockType": "reporter",
+				"text": "Line Break",
+				"arguments": {},
+			}
+				  ]
 		};
 	}
 
@@ -51,6 +57,11 @@ class Emmettblocks {
 	}
 	resetall({}) {
 		return "Reset cloud data!";
+	}
+	
+	linebreak({}) {
+		return "
+		"
 	}
 }
 
