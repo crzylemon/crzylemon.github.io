@@ -19,13 +19,13 @@ class Your_Extension { //Put your extension here!
                             }
                         },
                 ]
-        }
+        };
     }
     
         Block_ID({Your_Menu}) { //Block ID and menus
-        
+        return Your_Menu;
     }
     
 }
 
-Scratch.extensions.register(new Your_Extension()) //Again, Put your extension here
+Scratch.extensions.register(new Your_Extension()); //Again, Put your extension here
