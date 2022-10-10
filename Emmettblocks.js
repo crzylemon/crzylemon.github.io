@@ -52,8 +52,7 @@ class Emmettblocks {
 	}
 	
 	linebreak({}) {
-		return "
-		"
+		return "";
 	}
 }
 
