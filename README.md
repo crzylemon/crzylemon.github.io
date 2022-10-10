@@ -38,11 +38,6 @@ class Emmettblocks {
 				"blockType": "command",
 				"text": "Reset all",
 				"arguments": {},
-			}, {
-				"opcode": "linebreak",
-				"blockType": "reporter",
-				"text": "Line Break",
-				"arguments": {},
 			}
 				  ]
 		};
@@ -59,10 +54,8 @@ class Emmettblocks {
 		return "Reset cloud data!";
 	}
 	
-	linebreak({}) {
-		return "/n"
-	}
 }
 
 Scratch.extensions.register(new Emmettblocks());
+
 ```
