@@ -1,10 +1,10 @@
-class Emmettblocks {
+class CloudMultiplayer {
 	constructor() {}
 
 	getInfo() {
 		return {
-			"id": "emmettblocks",
-			"name": "Emmettblocks",
+			"id": "cloudplayer",
+			"name": "Cloud Multiplayer",
 			"blocks": [{
 				"opcode": "whengiven",
 				"blockType": "hat",
@@ -28,7 +28,7 @@ class Emmettblocks {
 			}, {
 				"opcode": "connect",
 				"blockType": "command",
-				"text": "Connect to cloud",
+				"text": "Connect to cloud (WORKS?)",
 				"arguments": {},
 			}
 				  ]
@@ -46,7 +46,7 @@ class Emmettblocks {
 		// Require module
 const { Session, Cloud } = require('scratchcloud');
 // Create user session
-const project = 458027255 // Project ID
+const project = 458027255; // Project ID
 const session = new Session(process.env.USERNAME, process.env.PASSWORD, function(user) {
   // Create cloud session
   const cloud = new Cloud(user, project, function(error, cloud) {
@@ -54,11 +54,11 @@ const session = new Session(process.env.USERNAME, process.env.PASSWORD, function
     if(error) throw error;
     
     // Log that the cloud session has started
-    return "Connected!"
+    return "Connected!";
    });
 });
 	}
 	
 }
 
-Scratch.extensions.register(new Emmettblocks());
+Scratch.extensions.register(new CloudMultiplayer());
