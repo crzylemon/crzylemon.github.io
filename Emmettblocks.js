@@ -28,9 +28,19 @@ class CloudMultiplayer {
 			}, {
 				"opcode": "connect",
 				"blockType": "command",
-				"text": "Connect to cloud (WORKS?)",
+				"text": "Connect to cloud)",
 				"arguments": {},
-			}
+			}, {
+				"opcode": "whenanyrecivedwith",
+				"blockType": "hat",
+				"text": "When anything with [validator] true recived",
+				"arguments": {
+					"validator": {
+						"type": "boolean",
+						"defaultValue":
+					},
+				},
+			}   
 				  ]
 		};
 	}
@@ -46,7 +56,7 @@ class CloudMultiplayer {
 		// Require module
 const { Session, Cloud } = require('scratchcloud');
 // Create user session
-const project = 458027255; // Project ID
+const project = null; // Project ID
 const session = new Session(process.env.USERNAME, process.env.PASSWORD, function(user) {
   // Create cloud session
   const cloud = new Cloud(user, project, function(error, cloud) {
@@ -57,6 +67,15 @@ const session = new Session(process.env.USERNAME, process.env.PASSWORD, function
     return "Connected!";
    });
 });
+	}
+		
+	whenanyrecivedwith({validator}) {
+		if validator == true {
+			return "True!"
+		}
+		else {
+			return "False."
+		}
 	}
 	
 }
