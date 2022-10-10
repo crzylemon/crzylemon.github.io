@@ -26,9 +26,9 @@ class Emmettblocks {
 					},
 				}
 			}, {
-				"opcode": "resetall",
+				"opcode": "connect",
 				"blockType": "command",
-				"text": "Reset all",
+				"text": "Connect to cloud",
 				"arguments": {},
 			}
 				  ]
@@ -42,8 +42,21 @@ class Emmettblocks {
 	give({brod}) {
 		return "Gave " + brod + " to cloud!";
 	}
-	resetall({}) {
-		return "Reset cloud data!";
+	connect({}) {
+		// Require module
+const { Session, Cloud } = require('scratchcloud');
+// Create user session
+const project = 458027255 // Project ID
+const session = new Session(process.env.USERNAME, process.env.PASSWORD, function(user) {
+  // Create cloud session
+  const cloud = new Cloud(user, project, function(error, cloud) {
+    // On error, throw error
+    if(error) throw error;
+    
+    // Log that the cloud session has started
+    return "Connected!"
+   });
+});
 	}
 	
 }
