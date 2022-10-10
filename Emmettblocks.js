@@ -1,3 +1,5 @@
+
+
 class CloudMultiplayer {
 	constructor() {}
 
@@ -37,7 +39,7 @@ class CloudMultiplayer {
 				"arguments": {
 					"validator": {
 						"type": "boolean",
-						"defaultValue":
+						"defaultValue": ""
 					},
 				},
 			}   
@@ -70,11 +72,11 @@ const session = new Session(process.env.USERNAME, process.env.PASSWORD, function
 	}
 		
 	whenanyrecivedwith({validator}) {
-		if validator == true {
-			return "True!"
+		if (validator == true) {
+			return "True!";
 		}
 		else {
-			return "False."
+			return "False.";
 		}
 	}
 	
