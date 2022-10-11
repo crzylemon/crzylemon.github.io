@@ -36,15 +36,11 @@ class CloudMultiplayer {
 			}, {
 				"opcode": "whenanyrecivedwith",
 				"blockType": "hat",
-				"text": "When anything with [validator] [trueorfalse] recived",
+				"text": "When anything with [validator] true recived",
 				"arguments": {
 					"validator": {
 						"type": "boolean",
 						"defaultValue": ""
-					},
-					"trueorfalse": {
-						items: ['true', 'false'],
-          					acceptReporters: false
 					},
 				},
 			}, {
