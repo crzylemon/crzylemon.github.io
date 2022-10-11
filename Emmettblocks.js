@@ -42,7 +42,6 @@ class CloudMultiplayer {
 						"defaultValue": ""
 					},
 					"trueorfalse": {
-						"type": "dropdown",
 						"items": ['true', 'false'],
           					"acceptReporters": false
 					},
