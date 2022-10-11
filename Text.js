@@ -10,20 +10,24 @@ class textcontrol { //Put your extension here!
                         {
                             "opcode": "write",
                             "blockType": "command",
-                            "text": "Write [towrite]",
+                            "text": "Write [towrite] [where]",
                             "arguments": {
                                 "towrite": {
                                     "type": "string",
                                     "defaultValue": "Hello world"
                                 },
+                                    where: {
+                                        acceptReporters: true,
+                                        items: ["Center", "p"]
+    },
                             }
                         },
                 ]
         };
     }
     
-        write({towrite}) {
-        return towrite;
+        write({towrite, where}) {
+        return towrite + where ;
     }
     
 }
