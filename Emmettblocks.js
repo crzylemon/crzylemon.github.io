@@ -35,11 +35,16 @@ class CloudMultiplayer {
 			}, {
 				"opcode": "whenanyrecivedwith",
 				"blockType": "hat",
-				"text": "When anything with [validator] true recived",
+				"text": "When anything with [validator] [trueorfalse] recived",
 				"arguments": {
 					"validator": {
 						"type": "boolean",
 						"defaultValue": ""
+					},
+					"trueorfalse": {
+						"type": "dropdown",
+						"items": ['true', 'false'],
+          					"acceptReporters": false
 					},
 				},
 			}, {
@@ -76,12 +81,9 @@ const session = new Session(process.env.USERNAME, process.env.PASSWORD, function
 });
 	}
 		
-	whenanyrecivedwith({validator}) {
-		if (validator == true) {
-			return "True!";
-		}
-		else {
-			return "False.";
+	whenanyrecivedwith({validator, trueorfalse}) {
+		if (validator == trueorfalse){
+			return trueorfalse;
 		}
 	}
 	
