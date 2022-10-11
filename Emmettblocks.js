@@ -77,9 +77,12 @@ const session = new Session(process.env.USERNAME, process.env.PASSWORD, function
 });
 	}
 		
-	whenanyrecivedwith({validator, trueorfalse}) {
-		if (validator == trueorfalse){
-			return trueorfalse;
+	whenanyrecivedwith({validator}) {
+		if (validator == true){
+			return true;
+		}
+		else {
+			return false;	
 		}
 	}
 	
