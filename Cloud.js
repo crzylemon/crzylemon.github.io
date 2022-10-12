@@ -50,6 +50,11 @@ class CloudMultiplayer {
 				"blockType": "reporter",
 				"text": "Last recived from cloud",
 				"arguments": {},
+			}, {
+				"opcode": "connected",
+				"blockType": "reporter",
+				"text": "Connected to cloud?",
+				"arguments": {},
 			} 
 				  ]
 		};
@@ -90,6 +95,10 @@ const session = new Session(process.env.USERNAME, process.env.PASSWORD, function
 	
 	recived({}) {
 		return "Placeholder.";
+	}
+	
+	connected({}) {
+		return "another placeholder lol";
 	}
 	
 }
