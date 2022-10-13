@@ -88,9 +88,6 @@ const session = new Session(process.env.USERNAME, process.env.PASSWORD, function
 		if (validator == true){
 			return true;
 		}
-		else {
-			return false;	
-		}
 	}
 	
 	recived({}) {
