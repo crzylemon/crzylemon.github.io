@@ -3,7 +3,7 @@ body {
   font-family: sans-serif;
 }
 
-.taskbar {
+taskbar {
   background-color: black;
   bottom: 0;
   width: 100%;
