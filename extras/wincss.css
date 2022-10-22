@@ -2,3 +2,9 @@ body {
   color: white;
   font-family: sans-serif;
 }
+
+.taskbar {
+  background-color: black;
+  bottom: 0;
+  width: 100%;
+}
