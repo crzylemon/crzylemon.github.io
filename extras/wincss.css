@@ -1,0 +1,19 @@
+body {
+  color: white;
+  font-family: sans-serif;
+}
+
+taskbar {
+  background-color: black;
+  bottom: 0;
+  width: 100%;
+  bottom: 0;
+  position: fixed;
+  left: 0;
+  height: 30;
+}
+
+.search {
+  height: 30;
+  font-size: 15;
+}
