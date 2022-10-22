@@ -7,4 +7,6 @@ taskbar {
   background-color: black;
   bottom: 0;
   width: 100%;
+  overflow: hidden;
+  position: fixed;
 }
