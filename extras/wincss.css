@@ -16,4 +16,20 @@ taskbar {
 .search {
   height: 30;
   font-size: 15;
+  left: 35;
+  position: fixed;
+}
+
+.icon1 {
+  width: 30;
+  position: fixed;
+  cursor: pointer;
+  left: 265;
+}
+
+.winicon {
+  width: 30;
+  position: fixed;
+  cursor: pointer;
+  left: 0;
 }
