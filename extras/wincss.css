@@ -9,4 +9,6 @@ taskbar {
   width: 100%;
   overflow: hidden;
   position: fixed;
+  left: 0;
+  height: 50;
 }
