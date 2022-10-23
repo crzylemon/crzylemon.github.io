@@ -1,7 +1,7 @@
 body {
   color: white;
   font-family: sans-serif;
-  cursor: url('mouse.png'), auto;
+  cursor: url('mouse.png'), 10px;
 }
 
 taskbar {
