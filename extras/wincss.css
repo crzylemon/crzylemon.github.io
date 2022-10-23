@@ -102,6 +102,29 @@ part[type="windowxbutton"]:hover {
   color: red;
 }
 
+img.app {
+  width: 50px;
+}
+
+.app1 {
+  width: 60px;
+  position: fixed;
+  top: 50;
+  left: 30;
+}
+
+app:hover {
+  background-color: #3e62f1ad;
+  width: 120px;
+  height: 120px;
+  position: fixed;
+}
+.app1icon {
+  left: 40;
+  position: fixed;
+  top: 10;
+}
+
 #snackbar1 {
   border-radius: 100px;
   visibility: hidden;
