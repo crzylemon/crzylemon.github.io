@@ -51,6 +51,38 @@ start {
   color: white;
 }
 
+window[type="header"] {
+  background-color: #dcdcdc;
+  width: 500;
+  height: 30;
+  left: 30%;
+  bottom: 68.3%;
+}
+
+window {
+  background-color: white;
+  width: 500;
+  height: 300;
+  color: black;
+  position: fixed;
+  left: 30%;
+  bottom: 35%;
+}
+
+part[type="windowtitle"] {
+  font-size: 20;
+  position: fixed;
+  left: 33%;
+  bottom: 68.6%;
+}
+
+.windowfavicon {
+  width: 30;
+  position: fixed;
+  left: 30%;
+  bottom: 68.4%;
+}
+
 #snackbar1 {
   border-radius: 100px;
   visibility: hidden;
