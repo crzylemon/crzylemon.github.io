@@ -6,13 +6,17 @@
 <script>
 
       function load() {
-        if (!document.fullscreenElement) {
-    document.html.requestFullscreen().catch((err) => {
-      alert(`Error attempting to enable fullscreen mode: ${err.message} (${err.name})`);
-    });
-  } else {
-    document.exitFullscreen();
-  }
+        // element which needs to enter full-screen mode
+var element = document.querySelector("#HTML");
+
+// make the element go to full-screen mode
+element.requestFullscreen()
+	.then(function() {
+		// element has entered fullscreen mode successfully
+	})
+	.catch(function(error) {
+		// element could not enter fullscreen mode
+	});
         document.getElementById('HTML').style.cursor = 'wait';
         setTimeout(stopload, 1000);
       }
