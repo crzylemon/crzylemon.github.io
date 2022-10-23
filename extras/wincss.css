@@ -45,7 +45,7 @@ start {
 }
 
 .fullscreen {
-  left: 390;
+  left: 250;
   position: fixed;
   bottom: 540;
 }
