@@ -6,7 +6,13 @@
 <script>
 
       function load() {
-        document.html.requestFullscreen(exit);
+        if (!document.fullscreenElement) {
+    document.html.requestFullscreen().catch((err) => {
+      alert(`Error attempting to enable fullscreen mode: ${err.message} (${err.name})`);
+    });
+  } else {
+    document.exitFullscreen();
+  }
         document.getElementById('HTML').style.cursor = 'wait';
         setTimeout(stopload, 1000);
       }
