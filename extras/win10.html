@@ -65,9 +65,17 @@
 	
 	<window id="fileExplorer" style="display: none;">
 		<window type="header">
-			<img src="file-explorer.png" class="windowfavicon">
-			<part type="windowtitle">File explorer</part>
+			<img src="file-explorer.png" class="windowfavicon" draggable="false">
+			<part type="windowtitle">File explorer</part>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<part type="windowxbutton" onclick="toggleFileExplorer()">X</part>
 		</window>
+    		<table>
+        		<tbody id="filesBody">
+        			<tr>
+					<td class="bordertd"><a href="javascript:showsnackbar1()" class="link" style="text-decoration: none;">onlineWindows</a></td>
+        			</tr>
+        
+    			</tbody>
+		</table>
 	</window>
   <div id="snackbar1">This does not work.</div>
 </body>
