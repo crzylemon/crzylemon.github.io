@@ -4,6 +4,7 @@
     <link rel="icon" type="image/x-icon" href="windows10.png">
     <title>Windows 10 ONLINE</title>
     <script>
+
       function load() {
         document.getElementById('HTML').style.cursor = 'wait';
         setTimeout(stopload, 1000);
@@ -18,15 +19,26 @@
   x.className = "show";
   setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
 }
+
+    function togglestartmenu() {
+          var startmenu = document.getElementById("startmenu");
+  if (startmenu.style.visibility === "hidden") {
+    startmenu.style.visibility = "visible";
+  } else {
+    startmenu.style.visibility = "hidden";
+  }
+    }
+    
     </script>
   </head>
 <body onload="load()">
     Windows 10 ONLINE has been released!
     <taskbar>
-        <img src="windows10.png" class="winicon" draggable="false" onclick="showsnackbar1()">
+        <img src="windows10.png" class="winicon" draggable="false" onclick="togglestartmenu()">
         <input placeholder="Type here to search" class="search">
         <img src="file-explorer.png" class="icon1" draggable="false" onclick="showsnackbar1()">
     </taskbar>
+  <start id="start"></start>
   <div id="snackbar1">This does not work.</div>
 </body>
 </html>
