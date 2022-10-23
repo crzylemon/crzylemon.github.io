@@ -56,7 +56,7 @@ window[type="header"] {
   width: 500;
   height: 30;
   left: 30%;
-  bottom: 63.04%;
+  bottom: 554;
 }
 
 window {
@@ -66,21 +66,40 @@ window {
   color: black;
   position: fixed;
   left: 30%;
-  bottom: 35%;
+  bottom: 254;
 }
 
 part[type="windowtitle"] {
   font-size: 20;
   position: fixed;
   left: 33%;
-  bottom: 63.3%;
+  bottom: 554;
 }
 
 .windowfavicon {
   width: 30;
   position: fixed;
   left: 30%;
-  bottom: 63.2%;
+  bottom: 554;
+}
+
+.bordertd {
+  border: 1px solid black;
+}
+
+part[type="windowxbutton"] {
+  bottom: 560;
+  position: fixed;
+  background-color: #c5c5c5;
+  width: 20;
+  height: 20;
+  text-align: center;
+  font-weight: 1000;
+  cursor: pointer;
+}
+
+part[type="windowxbutton"]:hover {
+  color: red;
 }
 
 #snackbar1 {
