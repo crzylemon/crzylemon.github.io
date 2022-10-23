@@ -56,7 +56,7 @@ window[type="header"] {
   width: 500;
   height: 30;
   left: 30%;
-  bottom: 68.3%;
+  bottom: 63.04%;
 }
 
 window {
@@ -73,14 +73,14 @@ part[type="windowtitle"] {
   font-size: 20;
   position: fixed;
   left: 33%;
-  bottom: 68.6%;
+  bottom: 63.3%;
 }
 
 .windowfavicon {
   width: 30;
   position: fixed;
   left: 30%;
-  bottom: 68.4%;
+  bottom: 63.2%;
 }
 
 #snackbar1 {
