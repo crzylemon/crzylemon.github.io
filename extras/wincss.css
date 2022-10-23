@@ -5,7 +5,7 @@ body {
 }
 
 taskbar {
-  background-color: black;
+  background-color: #000421;
   bottom: 0;
   width: 100%;
   bottom: 0;
@@ -33,6 +33,20 @@ taskbar {
   position: fixed;
   cursor: pointer;
   left: 0;
+}
+
+start {
+  background-color: #000421;
+  bottom: 30;
+  position: fixed;
+  left: 0;
+  width: 400;
+  height: 550;
+  visibility: hidden;
+}
+
+start.show {
+  visibility: visible;
 }
 
 #snackbar1 {
