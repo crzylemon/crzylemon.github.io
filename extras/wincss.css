@@ -42,11 +42,7 @@ start {
   left: 0;
   width: 400;
   height: 550;
-  visibility: hidden;
-}
-
-start.show {
-  visibility: visible;
+  display: none;
 }
 
 #snackbar1 {
