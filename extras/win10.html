@@ -12,6 +12,12 @@
       function stopload() {
         document.getElementById('HTML').style.cursor = 'default';
       }
+      
+      function showsnackbar1() {
+  var x = document.getElementById("snackbar1");
+  x.className = "show";
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
     </script>
   </head>
 <body onload="load()">
@@ -21,5 +27,6 @@
         <input placeholder="Type here to search" class="search">
         <img src="file-explorer.png" class="icon1" draggable="false">
     </taskbar>
+  <div id="snackbar1">This does not work.</div>
 </body>
 </html>
