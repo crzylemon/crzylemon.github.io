@@ -1,6 +1,7 @@
 body {
   color: white;
   font-family: sans-serif;
+  cursor: url('mouse.png'), auto;
 }
 
 taskbar {
