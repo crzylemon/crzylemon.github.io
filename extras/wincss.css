@@ -44,6 +44,12 @@ start {
   height: 550;
 }
 
+.fullscreen {
+  left: 390;
+  position: fixed;
+  bottom: 540;
+}
+
 #snackbar1 {
   border-radius: 100px;
   visibility: hidden;
