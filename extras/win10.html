@@ -41,6 +41,15 @@
 			// element could not enter fullscreen mode
 		});
 	}
+	
+	    function toggleFileExplorer() {
+      var y = document.getElementById("fileExplorer");
+  if (y.style.display === "none") {
+    y.style.display = "block";
+  } else {
+    y.style.display = "none";
+  }
+    }
     </script>
   </head>
 <body onload="load()">
@@ -48,11 +57,18 @@
     <taskbar>
         <img src="windows10.png" class="winicon" draggable="false" onclick="togglestartmenu()">
         <input placeholder="Type here to search" class="search">
-        <img src="file-explorer.png" class="icon1" draggable="false" onclick="showsnackbar1()">
+        <img src="file-explorer.png" class="icon1" draggable="false" onclick="toggleFileExplorer()">
     </taskbar>
 	<start id="start" style="display: none;">
 		<a href="javascript:fullscreen()" style="text-decoration: none;" class="fullscreen">Turn on fullscreen</a>
 	</start>
+	
+	<window>
+		<window type="header">
+			<img src="file-explorer.png" class="windowfavicon">
+			<part type="windowtitle">File explorer</part>
+		</window>
+	</window>
   <div id="snackbar1">This does not work.</div>
 </body>
 </html>
