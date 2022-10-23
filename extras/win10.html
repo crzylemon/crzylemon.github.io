@@ -1,11 +1,21 @@
-<html style="background-image: url(winbg.webp); background-size: cover;">
+<html style="background-image: url(winbg.webp); background-size: cover;" id="HTML">
   <head>
   <link rel="stylesheet" href="wincss.css">
     <link rel="icon" type="image/x-icon" href="windows10.png">
     <title>Windows 10 ONLINE</title>
+    <script>
+      function load() {
+        document.getElementById('HTML').style.cursor = 'wait';
+        setTimeout(stopload, 1000);
+      }
+      
+      function stopload() {
+        document.getElementById('HTML').style.cursor = 'default';
+      }
+    </script>
   </head>
 <body>
-    hmm... EPIC!
+    Windows 10 ONLINE has been released!
     <taskbar>
         <img src="windows10.png" class="winicon" draggable="false">
         <input placeholder="Type here to search" class="search">
