@@ -48,6 +48,7 @@ start {
   left: 250;
   position: fixed;
   bottom: 540;
+  color: white;
 }
 
 #snackbar1 {
