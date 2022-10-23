@@ -36,6 +36,7 @@ taskbar {
 }
 
 #snackbar1 {
+  border-radius: 100px;
   visibility: hidden;
   min-width: 250px;
   margin-left: -125px;
