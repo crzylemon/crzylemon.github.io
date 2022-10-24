@@ -27,6 +27,13 @@ taskbar {
   left: 265;
 }
 
+.icon2 {
+  width: 30;
+  position: fixed;
+  cursor: pointer;
+  left: 295;
+}
+
 .winicon {
   width: 20;
   position: fixed;
