@@ -50,6 +50,9 @@
     y.style.display = "none";
   }
     }
+	function Google() {
+		window.open("chrome://new-tab-page");
+	}
     </script>
   </head>
 <body onload="load()">
@@ -62,6 +65,7 @@
         <img src="windows10.png" class="winicon" draggable="false" onclick="togglestartmenu()">
         <input placeholder="Type here to search" class="search">
         <img src="file-explorer.png" class="icon1" draggable="false" onclick="toggleFileExplorer()">
+	<img src="googlee.png" class="icon2" draggable="false" onclick="Google()">
     </taskbar>
 	<start id="start" style="display: none;">
 		<a href="javascript:fullscreen()" style="text-decoration: none;" class="fullscreen">Turn on fullscreen</a>
