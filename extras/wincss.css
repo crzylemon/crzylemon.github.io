@@ -1,6 +1,7 @@
 body {
   color: white;
   font-family: sans-serif;
+  cursor: url('cursors/aero_arrow.cur'), auto;
 }
 
 taskbar {
@@ -23,21 +24,21 @@ taskbar {
 .icon1 {
   width: 30;
   position: fixed;
-  cursor: pointer;
+  cursor: url('cursors/aero_link.cur'), auto;
   left: 265;
 }
 
 .icon2 {
   width: 30;
   position: fixed;
-  cursor: pointer;
+  cursor: url('cursors/aero_link.cur'), auto;
   left: 295;
 }
 
 .winicon {
   width: 20;
   position: fixed;
-  cursor: pointer;
+  cursor: url('cursors/aero_link.cur'), auto;
   left: 5;
   bottom: 6;
 }
