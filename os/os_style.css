@@ -1,3 +1,10 @@
 html {
   cursor: url('cursor.cur'), auto;
 }
+
+button {
+  cursor: url(click.cur), auto;
+  background-color: white;
+  border-radius: 5px;
+  border-color: black;
+}
