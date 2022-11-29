@@ -1,3 +1,3 @@
 html {
-  cursor: url(cursor.cur);
+  cursor: url('cursor.cur'), auto;
 }
