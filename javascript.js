@@ -10,7 +10,7 @@ class js {
 			"blocks": [{
 				"opcode": "js",
 				"blockType": "command",
-				"text": "Run javascript [input]",
+				"text": "Alert [input]",
 				"arguments": {
 					"input": {
 						"type": "string",
@@ -20,7 +20,7 @@ class js {
 			}, {
 				"opcode": "jsreport",
 				"blockType": "reporter",
-				"text": "Run javascript [input1]",
+				"text": "Alert [input1]",
 				"arguments": {
 					"input1": {
 						"type": "string",
@@ -30,7 +30,7 @@ class js {
 			}, {
 				"opcode": "jsbutton",
 				"blockType": "BlockType.BUTTON",
-				"text": "Run javascript [input2]",
+				"text": "Alert [input2]",
 				"arguments": {
 				    "input2": {
 				        "type": "string",
@@ -43,21 +43,15 @@ class js {
 	}
 
 	js({input}) {
-        	var func=new Function (input);
-		
-		return func();
+        	alert(input)
 	}
 
 	jsreport({input1}) {
-		var func1()=new Function (input1);
-		
-		return func1();
+		alert(input1)
 	}
 	
 	jsbutton({input2}) {
-		var func2()=new Function (input2)
-		
-		return func2();
+		alert(input2)
 	}
 	
 }
