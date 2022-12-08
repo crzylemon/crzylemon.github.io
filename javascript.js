@@ -43,15 +43,21 @@ class js {
 	}
 
 	js({input}) {
-        eval(input);
+        	var func=new Function (input);
+		
+		return func();
 	}
 
 	jsreport({input1}) {
-		eval(input1);
+		var func1()=new Function (input1);
+		
+		return func1();
 	}
 	
 	jsbutton({input2}) {
-		eval(input2);
+		var func2()=new Function (input2)
+		
+		return func2();
 	}
 	
 }
