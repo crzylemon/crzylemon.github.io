@@ -43,15 +43,15 @@ class js {
 	}
 
 	js({input}) {
-        	return(input)
+        	return input;
 	}
 
 	jsreport({input1}) {
-		return(input1)
+		return input1;
 	}
 	
 	jsbutton({input2}) {
-		return
+		return input2;
 	}
 	
 }
