@@ -29,7 +29,7 @@ class js {
 				}
 			}, {
 				"opcode": "jsbutton",
-				"blockType": "boolean",
+				"blockType": "BlockType.BOOLEAN",
 				"text": "Return [input2]",
 				"arguments": {
 				    "input2": {
@@ -42,6 +42,19 @@ class js {
 				"blockType": "reporter",
 				"text": "Null",
 				"arguments": {},
+			}, {
+				"opcode": "jsunequal",
+				"blockType": "BlockType.BOOLEAN",
+				"text": "[num1] ≠ [num2]",
+				"arguments": {
+				    "num1": {
+				        "type": "string",
+				        "defaultValue": ""
+				    }, "num2": {
+				        "type": "string",
+				        "defaultValue": "50"
+				    }
+				},
 			}
 				  ]
 		};
@@ -61,6 +74,14 @@ class js {
 	
 	jsnull({}) {
 		return null;
+	}
+	
+	jsunequal({num1, num2}) {
+	    if (num1 != num2) {
+            		return true;
+        	} else {
+            		return false;
+        	}
 	}
 	
 }
