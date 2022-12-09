@@ -8,3 +8,13 @@
   border-radius: 5px;
   border-color: black;
 }
+
+@font-face {
+  font-family: xp;
+  src: url(fonts/winxp.ttf);
+}
+
+@font-face {
+  font-family: cool;
+  src: url(fonts/msjhbd.ttc);
+}
