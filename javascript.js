@@ -44,12 +44,12 @@ class js {
 				"arguments": {},
 			}, {
 				"opcode": "jsunequal",
-				"blockType": "BlockType.BOOLEAN",
+				"blockType": "reporter",
 				"text": "[num1] ≠ [num2]",
 				"arguments": {
 				    "num1": {
 				        "type": "string",
-				        "defaultValue": ""
+				        "defaultValue": " "
 				    }, "num2": {
 				        "type": "string",
 				        "defaultValue": "50"
