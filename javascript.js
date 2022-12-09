@@ -37,6 +37,11 @@ class js {
 				        "defaultValue": "placeholder"
 				    }
 				},
+			}, {
+				"opcode": "jsnull",
+				"blockType": "reporter",
+				"text": "Null",
+				"arguments": {},
 			}
 				  ]
 		};
@@ -52,6 +57,10 @@ class js {
 	
 	jsbutton({input2}) {
 		return input2;
+	}
+	
+	jsnull({}) {
+		return null;
 	}
 	
 }
