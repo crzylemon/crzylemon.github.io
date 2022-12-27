@@ -1,0 +1,157 @@
+body {
+-webkit-transition: .4s;
+transition: .4s;
+font-family: sans-serif;
+text-decoration: none;
+}
+/* Add a switch to toggle between light and dark mode */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  /* Hide the default checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* Add sliders to the switch */
+  .slider {
+    border-radius: 50px;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    border-radius: 50px;
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Add the dark mode styles */
+  body.dark {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  body.dark #navbaritem {
+    color: #fff;
+  }
+  
+  /* Light mode styles */
+#navbar {
+  background-color: rgb(211, 211, 211);
+  color: rgb(0, 0, 0);
+  box-shadow: 0px 0px 50px 0px rgba(0,0,0,0.2);
+}
+
+#navbar #navbaritem {
+  color: rgb(0, 0, 0);
+}
+
+/* Add some hover effects */
+#navbar #navbaritem:hover {
+  color: rgb(66, 66, 66);
+}
+
+/* Add a transition effect for the hover effect */
+#navbar #navbaritem {
+  transition: color .4s;
+}
+
+/* Dark mode styles */
+#navbar.dark {
+  background-color: #555;
+  color: #fff !important;
+}
+
+#navbaritem.dark {
+  color: #fff !important;
+}
+
+/* Add some hover effects */
+#navbar.dark #navbaritem:hover.dark {
+  color: rgb(212, 212, 212) !important;
+}
+
+#navbar ul {
+  display: flex;
+  align-items: center; /* Add this line */
+  list-style-type: none;
+}
+
+#navbar li {
+  flex: 1;
+  text-align: center;
+  text-decoration: none;
+}
+
+#navbar {
+  align-items: center; /* Add this line */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10%
+}
+
+#navbar p {
+  padding: 0 10px; /* Add some padding on the left and right */
+}
+
+/* Dropdown styles */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  cursor: default;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
