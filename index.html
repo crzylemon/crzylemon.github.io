@@ -1,18 +1,25 @@
-<!-- epic html file -->
+<!DOCTYPE html>
 <html>
   <head>
-    <title>Homepage</title>
-    <style>
-      html {
-        font-family: "sans-serif";
-      }
-    </style>
+    <link rel="stylesheet" href="css.css">
   </head>
   <body>
-    <h1>Emmett's World</h1>
-    <a href="https://github.com/emmettdewet14">My github account</a>
-    <a href="Cloud.js">Cloud Multiplayer Made Eaisier!</a>
-    <a href="extras/win10.html">Windows 10 ONLINE</a>
-    <a href="os/os_base.html>OS</a>
+    <nav id="navbar">
+      <ul>
+        <li><a href="/" id="navbaritem">Home</a></li>
+        <div class="dropdown" id="navbatitem">
+          <span>Websites/Code</span>
+          <div class="dropdown-content">
+            <a href="os/os_base.html">Emmett OS (WIP)</a>
+          </div>
+        </div>
+        <p>Dark mode</p>
+        <label class="switch">
+          <input type="checkbox" id="dark-mode-toggle">
+          <span class="slider"></span>
+        </label>
+      </ul>
+    </nav>
+    <script src="js.js"></script>
   </body>
 </html>
