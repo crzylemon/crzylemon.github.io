@@ -1,6 +1,6 @@
 var ExampleExtension = function () {
 };
-
+//owner: penguinmod
 /**
  * @return {object} This extension's metadata.
  */
