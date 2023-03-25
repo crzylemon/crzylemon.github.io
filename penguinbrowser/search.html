@@ -15,10 +15,12 @@
 
     </script>
     <script>
-      document.getElementById("search").innerHTML = "" + id + "";
+      function bodyOnLoad() {
+        document.getElementById("search").innerHTML = "" + id + "";
+      }
     </script>
   </head>
-  <body>
+  <body onload="bodyOnLoad()">
     <p>You searched </p><p id="search">UNKNOWN.</p><p>!</p>
   </body>
 </html>
