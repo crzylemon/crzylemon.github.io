@@ -1,13 +1,17 @@
 <html>
   <head>
     <script>
-      // Get the URLSearchParams object from the current URL
-      const params = new URLSearchParams(window.location.search);
+      // Get the URL of the current page
+      var url = window.location.href;
 
-      // Get the value of the "param1" parameter
-      const searchValue = params.get("search");
+      // Use a regular expression to extract the value of the "id" parameter
+      var regex = /[?&]id=([^&#]*)/;
+      var match = regex.exec(url);
+      var id = match ? match[1] : null;
 
-      console.log(searchValue); // "value1"
+      // The value of the "id" parameter is now stored in the variable "id"
+      console.log(id);
+
 
     </script>
   </head>
