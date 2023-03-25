@@ -5,17 +5,17 @@
       var url = window.location.href;
 
       // Use a regular expression to extract the value of the "id" parameter
-      var regex = /[?&]id=([^&#]*)/;
+      var regex = /[?&]search=([^&#]*)/;
       var match = regex.exec(url);
       var id = match ? match[1] : null;
 
       // The value of the "id" parameter is now stored in the variable "id"
-      console.log(id);
+      document.getElementById("search").innerHTML = id;
 
 
     </script>
   </head>
   <body>
-    
+    <p>You searched </p><p id="search">UNKNOWN.</p><p>!</p>
   </body>
 </html>
