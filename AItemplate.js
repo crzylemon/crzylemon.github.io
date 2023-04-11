@@ -23,7 +23,7 @@ class aitemplate { //Put your extension here!
     }
     
         prompt({prompt1}) { //Block ID and menus
-        return "Hello!";
+        return prompt1;
     }
     
 }
