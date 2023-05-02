@@ -1,5 +1,3 @@
-const ArgumentType = require('../../extension-support/argument-type');
-const BlockType = require('../../extension-support/block-type');
 
 const Discord = require('discord.js');
 const client = new Discord.Client();
