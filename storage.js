@@ -1,6 +1,6 @@
-const BlockType = require('/extension-support/block-type');
-const ArgumentType = require('/extension-support/argument-type');
-const Cast = require('/util/cast');
+import BlockType from '/extension-support/block-type';
+import ArgumentType from '/extension-support/argument-type';
+import Cast from '/util/cast';
 
 /**
  * Class for storage blocks
