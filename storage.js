@@ -1,10 +1,10 @@
-const BlockType = require('../../extension-support/block-type');
-const ArgumentType = require('../../extension-support/argument-type');
-const Cast = require('../../util/cast');
+const BlockType = require('/extension-support/block-type');
+const ArgumentType = require('/extension-support/argument-type');
+const Cast = require('/util/cast');
 
 /**
  * Class for storage blocks
- * @constructor
+ * @constructo
  */
 class JgStorageBlocks {
     constructor(runtime) {
