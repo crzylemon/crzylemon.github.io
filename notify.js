@@ -46,17 +46,17 @@
           {
             opcode: 'showNotification',
             blockType: Scratch.BlockType.COMMAND,
-            text: 'create notification with title [title] and text [text]',
+            text: 'create notification with text [text] and title [title]',
             arguments: {
               text: {
                 type: Scratch.ArgumentType.STRING,
-                defaultValue: ' world!'
-              }
-            },
+                defaultValue: 'Text'
+              },
               title: {
                 type: Scratch.ArgumentType.STRING,
-                defaultValue: ' world!'
+                defaultValue: 'Title'
               }
+            }
           },
           {
             opcode: 'closeNotification',
@@ -78,16 +78,16 @@
       return askForNotificationPermission();
     }
 
-    async _showNotification(text) {
+    async _showNotification(text,tite) {
       if (await this.hasPermission()) {
-        notification = new Notification('Notification from project', {
+        notification = new Notification(tite, {
           body: text
         });
       }
     }
 
-    showNotification({text, title}) {
-      new Notification(title, {text});
+    showNotification(body,title) {
+      this._showNotification(body,title);
     }
 
     closeNotification() {
