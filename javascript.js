@@ -42,19 +42,6 @@ class js {
 				"blockType": "reporter",
 				"text": "Null",
 				"arguments": {},
-			}, {
-				"opcode": "jsunequal",
-				"blockType": "reporter",
-				"text": "[num1] ≠ [num2]",
-				"arguments": {
-				    "num1": {
-				        "type": "string",
-				        "defaultValue": " "
-				    }, "num2": {
-				        "type": "string",
-				        "defaultValue": "50"
-				    }
-				},
 			}
 				  ]
 		};
@@ -76,13 +63,7 @@ class js {
 		return null;
 	}
 	
-	jsunequal({num1, num2}) {
-	    if (num1 != num2) {
-            		return true;
-        	} else {
-            		return false;
-        	}
-	}
+	
 	
 }
 
