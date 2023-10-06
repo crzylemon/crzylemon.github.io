@@ -8,9 +8,9 @@ class js {
 			"id": "javascript",
 			"name": "Javascript",
 			"blocks": [{
-				"opcode": "js",
+				"opcode": "crzyjscommand",
 				"blockType": "command",
-				"text": "Return [input]",
+				"text": "Javascript [input]",
 				"arguments": {
 					"input": {
 						"type": "string",
@@ -18,9 +18,9 @@ class js {
 					},
 				}
 			}, {
-				"opcode": "jsreport",
+				"opcode": "crzyjsreport",
 				"blockType": "reporter",
-				"text": "Return [input1]",
+				"text": "Javascript [input1]",
 				"arguments": {
 					"input1": {
 						"type": "string",
@@ -28,7 +28,7 @@ class js {
 					},
 				}
 			}, {
-				"opcode": "jsbutton",
+				"opcode": "crzyjsbool",
 				"blockType": "BlockType.BOOLEAN",
 				"text": "Return [input2]",
 				"arguments": {
@@ -47,16 +47,16 @@ class js {
 		};
 	}
 
-	js({input}) {
-        	return input;
+	crzyjscommand({input}) {
+        	eval(input);
 	}
 
-	jsreport({input1}) {
-		return input1;
+	crzyjsreport({input1}) {
+		eval(input1);
 	}
 	
-	jsbutton({input2}) {
-		return input2;
+	crzyjsbool({input2}) {
+		eval(input2);
 	}
 	
 	jsnull({}) {
