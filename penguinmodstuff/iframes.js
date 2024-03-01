@@ -1,9 +1,3 @@
-const formatMessage = require('format-message');
-const BlockType = require('../../extension-support/block-type');
-const ArgumentType = require('../../extension-support/argument-type');
-const ProjectPermissionManager = require('../../util/project-permissions');
-// const Cast = require('../../util/cast');
-
 const EffectOptions = {
     acceptReporters: true,
     items: [
@@ -609,4 +603,4 @@ class JgIframeBlocks {
     }
 }
 
-module.exports = JgIframeBlocks;
+Scratch.extensions.register(new JgIframeBlocks())
