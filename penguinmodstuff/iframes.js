@@ -454,6 +454,8 @@ class JgIframeBlocks {
         const iframe = this.SetNewIFrame();
         iframe.style.borderWidth = "0px";
         iframe.src = "data:text/html;base64,PERPQ1RZUEUgaHRtbD4KPGh0bWwgbGFuZz0iZW4tVVMiPgo8aGVhZD48L2hlYWQ+Cjxib2R5PjxoMT5IZWxsbyE8L2gxPjxwPllvdSd2ZSBqdXN0IGNyZWF0ZWQgYW4gaWZyYW1lIGVsZW1lbnQuPGJyPlVzZSB0aGlzIHRvIGVtYmVkIHNpdGVzIHdpdGggVVJMcyBvciBIVE1MIHVzaW5nIERhdGEgVVJJcy48L3A+PC9ib2R5Pgo8L2h0bWw+";
+        //specificly for videos :)
+        iframe.allow = "autoplay; fullscreen; picture-in-picture;";
         this.displayWebsiteUrl = iframe.src;
         // positions iframe to fit stage
         this.SetIFramePosition(iframe, 0, 0, this.runtime.stageWidth, this.runtime.stageHeight, 90); 
