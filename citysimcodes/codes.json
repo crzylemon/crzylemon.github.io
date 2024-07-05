@@ -1,0 +1,16 @@
+[
+  {
+    "name": "SUPERSPEED",
+    "rewardType": "physics",
+    "reward": {
+      "speed": 200,
+      "jump": "same"
+    }
+  },
+  {
+    "name": "BOING",
+    "rewardType": "item",
+    "//comment": "Below is a roblox gear id."
+    "reward": 16688968
+  }
+]
