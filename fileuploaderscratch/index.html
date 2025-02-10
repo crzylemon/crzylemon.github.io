@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File to Decimal Converter with Compression</title>
+</head>
+<body>
+    <h1>Convert a File to Decimal Byte List with Compression</h1>
+    <input type="file" id="fileInput" />
+    <button onclick="convertFile()">Convert</button>
+    <br>
+    <textarea id="output" rows="10" cols="50" readonly></textarea>
+
+    <script>
+        function convertFile() {
+            const fileInput = document.getElementById('fileInput');
+            const output = document.getElementById('output');
+            const file = fileInput.files[0];
+
+            if (!file) {
+                alert('Please select a file');
+                return;
+            }
+
+            const reader = new FileReader();
+
+            reader.onload = function(e) {
+                const bytes = new Uint8Array(e.target.result);
+                const compressedBytes = compressBytes(bytes);
+                output.value = compressedBytes;
+            };
+
+            reader.onerror = function() {
+                alert('An error occurred while reading the file');
+            };
+
+            reader.readAsArrayBuffer(file);
+        }
+
+        function compressBytes(bytes) {
+            let result = [];
+            let count = 1;
+
+            for (let i = 1; i < bytes.length; i++) {
+                if (bytes[i] === bytes[i - 1]) {
+                    count++;
+                } else {
+                    result.push(`${count}:${bytes[i - 1]}`);
+                    count = 1;  // reset count for the next byte
+                }
+            }
+
+            // Handle the last sequence of bytes
+            result.push(`${count}:${bytes[bytes.length - 1]}`);
+
+            return result.join(';');
+        }
+    </script>
+<a href="download.html">Go to download</a>
+</body>
+</html>
