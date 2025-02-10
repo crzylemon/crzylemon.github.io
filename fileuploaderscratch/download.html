@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decoder</title>
+</head>
+<body>
+    <textarea id="input" placeholder="Enter encoded data"></textarea>
+    <input type="text" id="filename" placeholder="Enter file name" />
+    <button onclick="decodeAndDownload()">Download</button>
+
+    <script>
+        function decodeAndDownload() {
+            let input = document.getElementById('input').value.trim();
+            let parts = input.split(';');
+            let output = [];
+
+            parts.forEach(pair => {
+                if (!pair.includes(':')) return;
+                let [count, byte] = pair.split(':').map(Number);
+                if (isNaN(count) || isNaN(byte)) return;
+                output.push(...Array(count).fill(byte));
+            });
+
+            let filename = document.getElementById('filename').value.trim() || 'decoded.bin';
+
+            let blob = new Blob([new Uint8Array(output)], {type: 'application/octet-stream'});
+            let a = document.createElement('a');
+            a.href = URL.createObjectURL(blob);
+            a.download = filename;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
+    </script>
+<a href="index.html">Go to Upload</a>
+</body>
+</html>
